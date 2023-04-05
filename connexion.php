@@ -32,69 +32,87 @@
                 <!-- <label for="password">Mot de passe</label> -->
                 <input type="password" name="password" id="password" placeholder="Mot de passe" required>
 
-                <input type="submit" value="Se connecter">
+                <input type="submit" value="Se connecter" onclick="connect()">
 
             </form>
 
             <!-- Récupérer les données de connexion en php -->
 
             <?php
+            
+                function connect(){
 
-                if (isset($_POST['email']) && isset($_POST['password'])) {
-
-                    $email = $_POST['email'];
-                    $password = $_POST['password'];
-
-                    if (!empty($email) && !empty($password)) {
-
-                        // Crypter le mot de passe avec la fonction sha 256.
-
-                        $password = hash('sha256', $password);
-
-                        // Connexion à la base de données grâce à PDO et aux credentials du fichier .env.
-
-                        try {
+                    if (isset($_POST['email']) && isset($_POST['password'])) {
+    
+                        $email = $_POST['email'];
+                        $password = $_POST['password'];
+    
+                        if (!empty($email) && !empty($password)) {
+    
+                            // Crypter le mot de passe avec la fonction sha 256.
+    
+                            $password = hash('sha256', $password);
+    
+                            // Connexion à la base de données grâce à PDO et aux credentials du fichier .env.
+    
+                            try {
+                                    
+                                $bdd = new PDO('mysql:host=localhost;dbname=lucas.briand;charset=utf8', 'root', '');
+    
+                            } catch (Exception $e) {
+    
+                                die('Erreur : ' . $e->getMessage());
+    
+                            }
+    
+                            // Vérifier si l'utilisateur existe dans la base de données.
+    
+                            $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = :email AND password = :password');
+                            $req->execute(array(
+                                'email' => $email,
+                                'password' => $password
+                            ));
+    
+                            $resultat = $req->fetch();
+    
+                            if ($resultat) {
+    
+                                echo 'Vous êtes connecté.';
                                 
-                            $bdd = new PDO('mysql:host=localhost;dbname=lucas.briand;charset=utf8', 'root', '');
-
-                        } catch (Exception $e) {
-
-                            die('Erreur : ' . $e->getMessage());
-
+                                // Ouvrir une session avec les données de l'utilisateur.
+    
+                                $_SESSION['id'] = $resultat['ID'];
+                                $_SESSION['email'] = $resultat['EMAIL'];
+                                $_SESSION['prenom'] = $resultat['PRENOM'];
+    
+                                // Rediriger l'utilisateur vers la page d'administration
+    
+                                header('Location: admin.php');
+    
+                            } else {
+    
+                                echo '<p>Mauvais identifiant ou mot de passe.</p>';
+    
+                            }
+    
                         }
+    
+                    }
+                }
 
-                        // Vérifier si l'utilisateur existe dans la base de données.
 
-                        $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE email = :email AND password = :password');
-                        $req->execute(array(
-                            'email' => $email,
-                            'password' => $password
-                        ));
+                // TODO : Terminer la fonction de déconnexion démarrée ici et dans la page admin.php
 
-                        $resultat = $req->fetch();
+                function disconnect(){
+                        
+                    if (isset($_POST['select'])) {
 
-                        if ($resultat) {
+                        // Détruire la session.
 
-                            echo 'Vous êtes connecté.';
-                            
-                            // Ouvrir une session avec les données de l'utilisateur.
-
-                            $_SESSION['id'] = $resultat['ID'];
-                            $_SESSION['email'] = $resultat['EMAIL'];
-                            $_SESSION['prenom'] = $resultat['PRENOM'];
-
-                            // Rediriger l'utilisateur vers la page d'administration
-
-                            header('Location: admin.php');
-
-                        } else {
-
-                            echo '<p>Mauvais identifiant ou mot de passe.</p>';
-
-                        }
+                        session_destroy();
 
                     }
-
+    
                 }
 
             ?>

@@ -22,6 +22,16 @@
 
             <p>Page servant d'administration</p>
 
+            <!-- bouton de déconnexion -->
+            
+            <form action="connexion.php" method="post" id="formulaire-deconnexion">
+            
+                <input type="submit" name="Déconnexion" onclick="disconnect()" />
+
+                <!-- TODO : ajouter un script js pour déconnecter l'utilisateur la fonction a débutté dans la page connexion -->
+
+            </form>
+
         </section>
         
     </body>

@@ -4,8 +4,6 @@
 
     session_start();
 
-    echo 'Bonjour ' . $_SESSION['email'] . '.';
-
     // Vérifier si l'utilisateur est connecté.
 
     if (isset($_SESSION['email'])) {

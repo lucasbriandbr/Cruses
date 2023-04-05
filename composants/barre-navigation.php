@@ -34,6 +34,8 @@
 
                     <li><a href="contact.php">Contact</a></li>
 
+                    <!-- TODO : Si l'utilisateur est connecté, afficher le bouton "admin" à la place de "Connexion" -->
+
                     <li><a href="connexion.php">Connexion</a></li>
 
                 </ul>
