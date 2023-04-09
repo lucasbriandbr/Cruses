@@ -22,6 +22,8 @@
 
             <p>Page présentant les différents types de croix</p>
 
+            <img src="img\1200px-Cross-Pattee-Alisee.svg.png" height="10%" width="10%" >Croix Alisee</img>
+
         </section>
         
     </body>
