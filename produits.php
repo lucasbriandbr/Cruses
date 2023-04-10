@@ -16,22 +16,29 @@
         
         <?php include 'composants/barre-navigation.php'; ?>
 
-        <produits>
-
-        <!-- TODO : Configurer le CSS pour display 5 produits par ligne (j'y arrive pas ptn) --> 
+        <div class="titres"> 
 
             <h1>Produits</h1>
 
             <p>Page présentant les différents types de produits</p>
 
-            <img src="img\pant.png" height="10%" width="10%" >Pantalons</img>
-            <img src="img\short.png" height="10%" width="10%" >Pantacourts</img>
-            <img src="img\swshirt.png" height="10%" width="10%" >Pulls</img>
-            <img src="img\tshirt.png" height="10%" width="10%" >T-shirts</img>
-            <img src="img\ttop.png" height="10%" width="10%" >Débardeurs</img>
-
-        </produits>
+        </div>
         
+        <div class="produits">
+
+            <img src="img\pant.png"></img>
+            <span class="description">Pantalons</span>
+            <img src="img\short.png"></img>
+            <span class="description">Pantacourts</span>
+            <img src="img\swshirt.png"></img>
+            <span class="description">Pulls</span>
+            <img src="img\tshirt.png"></img>
+            <span class="description">T-shirts</span>
+            <img src="img\ttop.png"></img>
+            <span class="description">Débardeurs</span>
+
+        </div>
+
     </body>
 
 </html>
