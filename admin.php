@@ -1,3 +1,5 @@
+<?php include 'composants/headers.php'; ?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -24,9 +26,9 @@
 
             <!-- bouton de déconnexion -->
             
-            <form action="connexion.php" method="post" id="formulaire-deconnexion">
+            <form action="functions/disconnect.php" method="post" id="formulaire-deconnexion">
             
-                <input type="submit" name="Déconnexion" onclick="disconnect()" />
+                <input type="submit" value="Déconnexion" name="Déconnexion"/>
 
                 <!-- TODO : ajouter un script js pour déconnecter l'utilisateur la fonction a débutté dans la page connexion -->
 

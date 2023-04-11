@@ -6,21 +6,25 @@
 
     // Vérifier si l'utilisateur est connecté.
 
-    if (isset($_SESSION['email'])) {
+    if (isset($_SESSION['id'])) {
         
         // Si l'on ne se trouve pas sur la page d'administration, rediriger vers la page d'administration.
 
-        if ($_SERVER['PHP_SELF'] != '/admin.php') {
+        if ($_SERVER['PHP_SELF'] != '/briand.lucas/admin.php') {
             
             header('Location: admin.php');
             
         }
 
     } else {
-            
-        // rediriger vers la page de connexion.
+        
+        // Si nous ne sommes pas sur la page de connexion, rediriger vers la page de connexion.
 
-        header('Location: connexion.php');
+        if ($_SERVER['PHP_SELF'] != '/briand.lucas/connexion.php') {
+            
+            header('Location: connexion.php');
+            
+        }
         
     }
 
