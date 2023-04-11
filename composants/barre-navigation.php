@@ -34,9 +34,17 @@
 
                     <li><a href="contact.php">Contact</a></li>
 
-                    <!-- TODO : Si l'utilisateur est connecté, afficher le bouton "admin" à la place de "Connexion" -->
+                    <!-- Si l'utilisateur est connecté, afficher le bouton "admin" à la place de "Connexion" -->
 
-                    <li><a href="connexion.php">Connexion</a></li>
+                    <?php if (isset($_SESSION['id'])) { ?>
+
+                        <li><a href="admin.php">Admin</a></li>
+
+                    <?php } else { ?>
+
+                        <li><a href="connexion.php">Connexion</a></li>
+
+                    <?php } ?>
 
                 </ul>
 
