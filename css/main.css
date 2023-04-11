@@ -53,3 +53,12 @@ section {
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/* Page de produits */
+
+.produits {
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Martel', serif;
+}

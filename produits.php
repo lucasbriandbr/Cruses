@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>cruces - les produits</title>
-        <link rel="stylesheet" href="css/produits.css">
+        <link rel="stylesheet" href="css/main.css">
 
     </head>
 
@@ -16,28 +16,57 @@
         
         <?php include 'composants/barre-navigation.php'; ?>
 
-        <div class="titres"> 
+        <section>
 
             <h1>Produits</h1>
 
             <p>Page présentant les différents types de produits</p>
-
-        </div>
         
-        <div class="produits">
+            <div class="produits">
+                
+                <div class="categories">
+                    <span class="description">Pantalons</span>
+                </div>
 
-            <img src="img\pant.png"></img>
-            <span class="description">Pantalons</span>
-            <img src="img\short.png"></img>
-            <span class="description">Pantacourts</span>
-            <img src="img\swshirt.png"></img>
-            <span class="description">Pulls</span>
-            <img src="img\tshirt.png"></img>
-            <span class="description">T-shirts</span>
-            <img src="img\ttop.png"></img>
-            <span class="description">Débardeurs</span>
+                <div class="collection">
 
-        </div>
+                </div>
+
+                <div class="categories">
+                    <span class="description">Pantacourts</span>
+                </div>
+
+                <div class="collection">
+
+                </div>
+
+                <div class="categories">
+                    <span class="description">Pulls</span>
+                </div>
+
+                <div class="collection">
+
+                </div>
+
+                <div class="categories">
+                    <span class="description">T-shirts</span>
+                </div>
+
+                <div class="collection">
+
+                </div>
+
+                <div class="categories">
+                    <span class="description">Débardeurs</span>
+                </div>
+
+                <div class="collection">
+
+                </div>
+
+            </div>
+
+        </section>
 
     </body>
 

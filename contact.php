@@ -23,6 +23,8 @@
             <p>Page avec formulaire de contact</p>
 
         </section>
+
+        <!-- TODO : Formulaire de contact -->
         
     </body>
 
