@@ -19,18 +19,18 @@ div.titres{
 }
 
 div.produits {
-    display:flex;
+    display: flex;
     flex-direction: row;
-    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 18%;
+    min-width: 18%;
+    margin-left: 1%;
+    margin-right: 1%;
     font-family: 'Martel', serif;
 }
 
 img {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    width: 18%;
-    margin-left: 1%;
-    margin-right: 1%;
+    
     box-shadow: 0px 0px 10px gray;
 }
