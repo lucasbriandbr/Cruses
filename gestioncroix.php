@@ -20,6 +20,10 @@
 
         <section>
 
+<!-- Bouton de retour -->
+
+<a href="admin.php" class="bouton-retour">Retour</a>
+
             <h1>Gestion des croix</h1>
 
             <p>TODO : Afficher les croix ci-dessous.</p>

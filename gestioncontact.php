@@ -20,6 +20,10 @@
 
         <section>
 
+            <!-- Bouton de retour -->
+
+            <a href="admin.php" class="bouton-retour">Retour</a>
+
             <h1>Gestion des prises de contact</h1>
 
             <p>TODO : Afficher les prises de contact ci-dessous : </p>
