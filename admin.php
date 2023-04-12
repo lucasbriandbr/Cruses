@@ -24,21 +24,21 @@
 
             <!-- Liens menant à diffférentes pages d'administration : -->
             
-            <ul class="admin-buttons">
+            <div class="buttonsadmin">
 
-                <li><a href="gestioncroix.php">Gestion des croix</a></li>
+                <a href="gestioncroix.php">Gestion des croix</a>
 
-                <li><a href="gestionproduit.php">Gestion des produits</a></li>
+                <a href="gestionproduit.php">Gestion des produits</a>
 
-                <li><a href="gestioncontact.php">Gestion des contacts</a></li>
+                <a href="gestioncontact.php">Gestion des contacts</a>
 
-            </ul>
+            </div>
 
             <!-- bouton de déconnexion -->
             
             <form action="functions/disconnect.php" method="post" id="formulaire-deconnexion">
             
-                <input type="submit" value="Déconnexion" name="Déconnexion"/>
+                <input type="submit" value="Déconnexion" id="deconnexionbutton" name="Déconnexion"/>
 
                 <!-- TODO : ajouter un script js pour déconnecter l'utilisateur la fonction a débutté dans la page connexion -->
 

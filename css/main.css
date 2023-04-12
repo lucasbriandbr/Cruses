@@ -54,18 +54,9 @@ section {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Page de produits */
-
-.produits {
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    font-family: 'Martel', serif;
-}
-
 /* Page d'administration */
 
-.admin-buttons {
+.buttonsadmin {
     display: flex;
     flex-direction: row;
     gap: 16px;
@@ -75,9 +66,65 @@ section {
     list-style-type: none;
 }
 
-.admin-buttons li {
+.buttonsadmin a {
     display: flex;
-    width: max-content;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-style: normal;
+    width: -webkit-fill-available;
+    border-radius: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Barre de navigation  */
+
+.barre-navigation {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 16px;
+    margin: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#logo {
+    width: 50px;
+    height: 50px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-family: 'Martel', serif;
+    font-size: 16px;
+    font-weight: 700;
+    list-style-type: none;
+}
+
+.buttons li {
+    display: flex;
     flex-direction: row;
     gap: 16px;
     align-items: center;
@@ -86,7 +133,22 @@ section {
     color: black;
 }
 
-.admin-buttons li a {
+.buttons li a {
     text-decoration: none;
     color: black;
 }
+
+/* Retirer les styles par défaut du input type="submit", puis l'afficher comme un lien */
+
+input[type="submit"] {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+/* @media (max-width: 599px) {
+} */
+

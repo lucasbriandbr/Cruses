@@ -23,42 +23,6 @@
             <p>Page présentant les différents types de produits</p>
         
             <div class="produits">
-                
-                <div class="categories">
-                    <span class="description">Pantalons</span>
-                </div>
-
-                <div class="collection">
-
-                </div>
-
-                <div class="categories">
-                    <span class="description">Pantacourts</span>
-                </div>
-
-                <div class="collection">
-
-                </div>
-
-                <div class="categories">
-                    <span class="description">Pulls</span>
-                </div>
-
-                <div class="collection">
-
-                </div>
-
-                <div class="categories">
-                    <span class="description">T-shirts</span>
-                </div>
-
-                <div class="collection">
-
-                </div>
-
-                <div class="categories">
-                    <span class="description">Débardeurs</span>
-                </div>
 
                 <div class="collection">
 
