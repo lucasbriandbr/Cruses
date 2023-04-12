@@ -8,9 +8,9 @@
 
     if (isset($_SESSION['id'])) {
         
-        // Si l'on ne se trouve pas sur la page d'administration, rediriger vers la page d'administration.
-
-        if ($_SERVER['PHP_SELF'] != '/briand.lucas/admin.php') {
+        // Si l'on se trouve sur la page de connexion, rediriger vers la page d'administration.
+        
+        if ($_SERVER['PHP_SELF'] == '/briand.lucas/connexion.php') {
             
             header('Location: admin.php');
             

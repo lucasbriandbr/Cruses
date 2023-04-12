@@ -20,9 +20,19 @@
 
         <section>
 
-            <h1>Admin</h1>
+            <h1>Espace Administrateur</h1>
 
-            <p>Page servant d'administration</p>
+            <!-- Liens menant à diffférentes pages d'administration : -->
+            
+            <ul class="admin-buttons">
+
+                <li><a href="gestioncroix.php">Gestion des croix</a></li>
+
+                <li><a href="gestionproduit.php">Gestion des produits</a></li>
+
+                <li><a href="gestioncontact.php">Gestion des contacts</a></li>
+
+            </ul>
 
             <!-- bouton de déconnexion -->
             

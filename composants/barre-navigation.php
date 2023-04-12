@@ -1,3 +1,15 @@
+<?php
+
+    //  Si l'on ne se trouve pas sur la page de connexion ou de l'administration, ou qu'on ne se trouve pas dans un des onglets de l'administration, démarrer une session.
+    
+    if ($_SERVER['PHP_SELF'] != '/briand.lucas/connexion.php' && $_SERVER['PHP_SELF'] != '/briand.lucas/admin.php' && $_SERVER['PHP_SELF'] != '/briand.lucas/gestioncroix.php' && $_SERVER['PHP_SELF'] != '/briand.lucas/gestionproduit.php' && $_SERVER['PHP_SELF'] != '/briand.lucas/gestioncontact.php') {
+        
+        session_start();
+        
+    }
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
