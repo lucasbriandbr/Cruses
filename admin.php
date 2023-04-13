@@ -20,6 +20,16 @@
 
         <section>
 
+            <!-- bouton de déconnexion -->
+            
+            <form action="functions/disconnect.php" method="post" id="formulaire-deconnexion">
+            
+                <input type="submit" value="Déconnexion" id="deconnexionbutton" name="Déconnexion"/>
+
+                <!-- TODO : ajouter un script js pour déconnecter l'utilisateur la fonction a débutté dans la page connexion -->
+
+            </form>
+
             <h1>Espace Administrateur</h1>
 
             <!-- Liens menant à diffférentes pages d'administration : -->
@@ -33,16 +43,6 @@
                 <a href="gestioncontact.php">Gestion des contacts</a>
 
             </div>
-
-            <!-- bouton de déconnexion -->
-            
-            <form action="functions/disconnect.php" method="post" id="formulaire-deconnexion">
-            
-                <input type="submit" value="Déconnexion" id="deconnexionbutton" name="Déconnexion"/>
-
-                <!-- TODO : ajouter un script js pour déconnecter l'utilisateur la fonction a débutté dans la page connexion -->
-
-            </form>
 
         </section>
         

@@ -20,13 +20,33 @@
 
         <section>
 
-<!-- Bouton de retour -->
+            <!-- Bouton de retour -->
 
-<a href="admin.php" class="bouton-retour">Retour</a>
+            <a href="admin.php" class="bouton-retour">Retour</a>
 
             <h1>Gestion des croix</h1>
 
             <p>TODO : Afficher les croix ci-dessous.</p>
+
+        </section>
+
+        <!-- Section d'ajout des croix -->
+
+        <section>
+
+            <h2>Ajouter une croix</h2>
+
+            <form action="functions/croix/ajouterCroix.php" method="post" id="formulaire-ajout-croix">
+
+                <input placeholder="Nom de la Croix :" type="text" name="nom" id="nom" required>
+
+                <input placeholder="Description de la Croix :" type="text" name="description" id="description" required>
+
+                <input placeholder="Lien de l'image de la Croix :" type="text" name="image" id="image" required>
+
+                <input type="submit" value="Ajouter" id="ajouterbutton" name="Ajouter"/>
+
+            </form>
 
         </section>
         

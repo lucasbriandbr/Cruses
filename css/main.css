@@ -12,10 +12,7 @@ section {
     gap: 16px;
     border-radius: 16px;
     margin: 16px;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 32px;
     background: rgba(255, 255, 255, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -64,12 +61,16 @@ section {
     font-size: 16px;
     font-weight: 700;
     list-style-type: none;
+    text-align: center;
 }
 
 .buttonsadmin a {
     display: flex;
     flex-direction: row;
     gap: 16px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
     color: black;
@@ -138,7 +139,7 @@ section {
     color: black;
 }
 
-/* Retirer les styles par défaut du input type="submit", puis l'afficher comme un lien */
+/* Retirer les styles par défaut du input type="submit" et l'afficher comme un lien */
 
 input[type="submit"] {
     background: none;
@@ -147,8 +148,65 @@ input[type="submit"] {
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    font-family: 'Martel', serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    text-decoration: underline;
 }
 
-/* @media (max-width: 599px) {
-} */
+/* Gestion de la croix section ajouter une croix */
 
+#formulaire-ajout-croix {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    list-style-type: none;
+}
+
+#formulaire-ajout-croix input {
+    font-style: normal;
+    text-decoration: none;
+    color: black;
+    width: -webkit-fill-available;
+    border-radius: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 650px) {
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-family: 'Martel', serif;
+        font-size: 16px;
+        font-weight: 700;
+        list-style-type: none;
+    }
+
+    .buttonsadmin {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        font-family: 'Martel', serif;
+        font-size: 16px;
+        font-weight: 700;
+        list-style-type: none;
+        text-align: center;
+    }
+    
+}
