@@ -242,5 +242,31 @@ input[type="submit"] {
         list-style-type: none;
         text-align: center;
     }
+
+    .collection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 700;
+        list-style-type: none;
+    }
+    
+}
+
+@media ( min-width: 650px ) and ( max-width: 800px) {
+
+    .collection {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 700;
+        list-style-type: none;
+    }
     
 }
