@@ -26,7 +26,7 @@
 
             <h1>Gestion des croix</h1>
 
-            <p>TODO : Ajouter une page à fin de modification pour chacune des croix ci-dessous.</p>
+            <p>TODO : Ajouter une page à fin de modification pour chacune des croix ci-dessous. S'inspirer de la page croix.php et afficher un ID en paramètre GET afin de modifier la description. Afficher les vaeurs dans des inputs de champs pré-remplis.</p>
 
         </section>
 
