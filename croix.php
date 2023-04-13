@@ -16,13 +16,21 @@
         
         <?php include 'composants/barre-navigation.php'; ?>
 
+        <?php include 'functions/croix/getCroixInformations.php'; ?>
+
         <section>
 
             <h1>Croix</h1>
 
             <p>Page présentant les différents types de croix</p>
+            
+            <!-- Afficher les différents types de croix -->
 
-            <img src="img\1200px-Cross-Pattee-Alisee.svg.png" height="10%" width="10%" >Croix Alisee</img>
+            <div class="collection">
+                    
+                <?php include 'functions/croix/getCroix.php'; ?>
+
+            </div>
 
         </section>
         

@@ -22,13 +22,13 @@
 
     while ($croix = $recupererCroix->fetch()) {
 
-        echo '<div class="croix">';
+        echo '<div class="produit">';
 
-        echo '<h3>' . $croix['NAME'] . '</h3>';
+            echo '<img src="' . $croix['LINK'] . '" alt="Image de la croix" class="crossimage">';
 
-        echo '<p>' . $croix['DESCRIPTION'] . '</p>';
+            echo '<h3>' . $croix['NAME'] . '</h3>';
 
-        echo '<img src="' . $croix['LINK'] . '" alt="Image de la croix">';
+            echo '<a href="croix.php?id=' . $croix['ID'] . '">En savoir plus</a>';
 
         echo '</div>';
 
