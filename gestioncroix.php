@@ -26,7 +26,21 @@
 
             <h1>Gestion des croix</h1>
 
-            <p>TODO : Afficher les croix ci-dessous.</p>
+            <p>TODO : Ajouter une page à fin de modification pour chacune des croix ci-dessous.</p>
+
+        </section>
+
+        <section>
+
+            <!-- Section d'affichage des croix -->
+
+            <h2>Afficher les croix</h2>
+
+            <div class="collection">
+                    
+                <?php include 'functions/croix/getCroixAdmin.php'; ?>
+
+            </div>
 
         </section>
 
