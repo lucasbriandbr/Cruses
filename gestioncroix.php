@@ -38,7 +38,7 @@
 
             <div class="collection">
                     
-                <?php include 'functions/croix/getCroixAdmin.php'; ?>
+                <?php include 'functions/croix/getCroixAdmin.php';?>
 
             </div>
 

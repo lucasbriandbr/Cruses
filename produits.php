@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Images importées de "www.svgrepo.com/collection/clothes-line-vectors-2/" -->
+
 <html lang="fr">
 
     <head>
@@ -16,17 +16,19 @@
         
         <?php include 'composants/barre-navigation.php'; ?>
 
+        <?php include 'functions/croix/getProduitsInformations.php'; ?>
+
         <section>
 
             <h1>Produits</h1>
 
             <p>Page présentant les différents types de produits</p>
-        
-            <div class="produits">
+            
+            <!-- Afficher les différents types de produits -->
 
-                <div class="collection">
-
-                </div>
+            <div class="collection">
+                    
+                <?php include 'functions/produits/getProduits.php'; ?>
 
             </div>
 

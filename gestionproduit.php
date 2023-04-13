@@ -20,13 +20,47 @@
 
         <section>
 
-<!-- Bouton de retour -->
+            <!-- Bouton de retour -->
 
-<a href="admin.php" class="bouton-retour">Retour</a>
+            <a href="admin.php" class="bouton-retour">Retour</a>
 
             <h1>Gestion des produits</h1>
 
-            <p>TODO : Afficher les produits ci-dessous.</p>
+            <p>TODO : Ajouter une page à fin de modification pour chacune des produits ci-dessous. S'inspirer de la page produits.php et afficher un ID en paramètre GET afin de modifier la description. Afficher les valeurs dans des inputs de champs pré-remplis.</p>
+
+        </section>
+
+        <section>
+
+            <!-- Section d'affichage des produits -->
+
+            <h2>Afficher les produits</h2>
+
+            <div class="collection">
+                    
+                <?php include 'functions/produits/getProduitsAdmin.php';?>
+
+            </div>
+
+        </section>
+
+        <!-- Section d'ajout des produits -->
+
+        <section>
+
+            <h2>Ajouter un produit</h2>
+
+            <form action="functions/produits/ajouterProduits.php" method="post" id="formulaire-ajout-produits">
+
+                <input placeholder="Nom du Produit :" type="text" name="nom" id="nom" required>
+
+                <input placeholder="Description du Produit :" type="text" name="description" id="description" required>
+
+                <input placeholder="Lien de l'image du Produit :" type="text" name="image" id="image" required>
+
+                <input type="submit" value="Ajouter" id="ajouterbutton" name="Ajouter"/>
+
+            </form>
 
         </section>
         
