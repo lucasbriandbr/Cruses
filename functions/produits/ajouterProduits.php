@@ -14,11 +14,11 @@
 
             // Si l'utilisateur a cliqué sur le bouton "Ajouter", vérifier si l'utilisateur a rempli tous les champs.
 
-            if (isset($_POST['nom']) && isset($_POST['description']) && isset($_POST['image'])) {
+            if (isset($_POST['nom']) && isset($_POST['description']) && isset($_POST['image']) && isset($_POST['price'])) {
 
                 // Si l'utilisateur a rempli tous les champs, vérifier si l'utilisateur a rempli tous les champs.
 
-                if (!empty($_POST['nom']) && !empty($_POST['description']) && !empty($_POST['image'])) {
+                if (!empty($_POST['nom']) && !empty($_POST['description']) && !empty($_POST['image']) && !empty($_POST['price'])) {
                     
                     // Si l'utilisateur a rempli tous les champs, se connecter à la base de données grâce à PDO et aux credentials du fichier .env.
 
@@ -40,31 +40,33 @@
 
                     $image = htmlspecialchars($_POST['image']);
 
-                    // Vérifier si la croix existe déjà.
+                    $price = htmlspecialchars($_POST['price']);
 
-                    $verifierCroix = $bdd->prepare('SELECT * FROM croix WHERE NAME = ?');
+                    // Vérifier si le produit existe déjà.
 
-                    $verifierCroix->execute(array($nom));
+                    $verifierProduits = $bdd->prepare('SELECT * FROM produits WHERE NAME = ?');
 
-                    $croixExiste = $verifierCroix->rowCount();
+                    $verifierProduits->execute(array($nom));
 
-                    if ($croixExiste == 0) {
+                    $produitsExiste = $verifierProduits->rowCount();
 
-                        // Si la croix n'existe pas, ajouter la croix dans la base de données.
+                    if ($produitsExiste == 0) {
 
-                        $ajouterCroix = $bdd->prepare('INSERT INTO croix(NAME, DESCRIPTION, LINK) VALUES(?, ?, ?)');
+                        // Si le produit n'existe pas, ajouter le produit dans la base de données.
 
-                        $ajouterCroix->execute(array($nom, $description, $image));
+                        $ajouterProduit = $bdd->prepare('INSERT INTO produits(NAME, DESCRIPTION, LINK, PRICE) VALUES(?, ?, ?, ?)');
 
-                        // Rediriger l'utilisateur vers la page de gestion des croix.
+                        $ajouterProduit->execute(array($nom, $description, $image, $price));
 
-                        header('Location: ../../gestioncroix.php');
+                        // Rediriger l'utilisateur vers la page de gestion des produits.
+
+                        header('Location: ../../gestionproduit.php');
 
                     } else {
 
-                        // Si la croix existe déjà, afficher un message d'erreur.
+                        // Si le produit existe déjà, afficher un message d'erreur.
 
-                        echo 'La croix existe déjà';
+                        echo 'Le produit existe déjà';
 
                     }
 

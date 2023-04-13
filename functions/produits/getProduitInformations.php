@@ -50,7 +50,7 @@
                         
                         <p>' . $produits['DESCRIPTION'] . '</p>
 
-                        <p>' . $produits['PRIX'] . '</p>
+                        <p>' . $produits['PRICE'] . ' € par pièce</p>
 
                     </div>
 

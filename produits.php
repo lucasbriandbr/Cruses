@@ -16,7 +16,7 @@
         
         <?php include 'composants/barre-navigation.php'; ?>
 
-        <?php include 'functions/croix/getProduitsInformations.php'; ?>
+        <?php include 'functions/produits/getProduitInformations.php'; ?>
 
         <section>
 

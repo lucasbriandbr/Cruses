@@ -58,6 +58,8 @@
 
                 <input placeholder="Lien de l'image du Produit :" type="text" name="image" id="image" required>
 
+                <input placeholder="Prix du Produit :" type="text" name="price" id="price" required>
+
                 <input type="submit" value="Ajouter" id="ajouterbutton" name="Ajouter"/>
 
             </form>
