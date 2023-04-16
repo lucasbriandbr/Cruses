@@ -29,6 +29,20 @@
             <p>TODO : Afficher les prises de contact ci-dessous : </p>
 
         </section>
+
+        <section>
+
+            <!-- Section d'affichage des contacts -->
+
+            <h2>Afficher les contacts</h2>
+
+            <div class="liste">
+                    
+                <?php include 'functions/contact/getContactAdmin.php';?>
+
+            </div>
+
+        </section>
         
     </body>
 
