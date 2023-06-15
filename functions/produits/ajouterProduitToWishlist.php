@@ -18,7 +18,7 @@
 
     $ajouterProduit->execute(array($_POST['Ajouter'], $_SESSION['id']));
 
-    // Rediriger vers la page de gestion des croix.
+    // Rediriger vers la WISHLIST
 
     header('Location: ../../wishlist.php');
 

@@ -86,9 +86,11 @@
 
         // On vérifie si le id du produit est contenu dans la liste de wishlist
 
-        $wishlist = explode(',', $user['WISHLIST']);
+        // $wishlist = implode(',', $user['WISHLIST']);
 
-        if (in_array($_GET['id'], $wishlist)) {
+        echo $user['WISHLIST'];
+
+        if (in_array($_GET['id'], $user['WISHLIST'])) {
 
             echo 'Il est dans la wishlist';
 
