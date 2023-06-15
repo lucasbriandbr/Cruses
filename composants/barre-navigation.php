@@ -32,9 +32,19 @@
 
             <!-- Si l'utilisateur est connecté, afficher le bouton "admin" à la place de "Connexion" -->
 
-            <?php if (isset($_SESSION['id'])) { ?>
+            <?php if (isset($_SESSION['role'])) { 
+                
+                // Vérifier le rôle de l'utilisateur.
 
-                <li><a href="admin.php">Admin</a></li>
+                if ($_SESSION['role'] == 'ADMIN') { ?>
+
+                    <li><a href="admin.php">Admin</a></li>
+
+                <?php } elseif ($_SESSION['role'] == 'GUEST') { ?>
+
+                    <li><a href="wishlist.php">Wishlist</a></li>
+
+                <?php } ?>
 
             <?php } else { ?>
 

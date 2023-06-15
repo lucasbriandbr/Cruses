@@ -14,6 +14,7 @@ Objectifs ordonnés :
 2 - Mise en place de l'espace WISHLIST
     
     2.1 - Modification de la liste des produits pour une relation WISHLIST en MANY-TO-MANY pour lier les produits et les utilisateurs qui souhaitent ajouter ce produit à la WISHLIST
+    //  Ajout de la WISHLIST à utilisateurs
     2.2 - Mise en place d'un système de récupération des données des produits mentionnés dans la wishlist pour l'espace WISHLIST. (format JSON si possible)
     2.3 - Affichage des produits de la même manière que les autres produits, mais rajout d'un bouton " <3 " cliquable dans les pages WISHLIST et produits
     2.4 - Au clic du bouton " <3 " désormais disponible, envoyer une requête pour ajouter ou supprimer de la wishlist, et remplir ou vider le bouton " <3 " en fonction.

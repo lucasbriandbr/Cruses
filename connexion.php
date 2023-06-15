@@ -82,10 +82,20 @@
                             $_SESSION['id'] = $resultat['ID'];
                             $_SESSION['email'] = $resultat['EMAIL'];
                             $_SESSION['prenom'] = $resultat['PRENOM'];
+                            $_SESSION['role'] = $resultat['ROLE'];
+                            $_SESSION['wishlist'] = $resultat['WISHLIST'];
+                            
+                            // Rediriger l'utilisateur vers la page d'administration si il dispose du role ADMIN sinon vers la page de WISHLIST si il est GUEST.
 
-                            // Rediriger l'utilisateur vers la page d'administration
+                            if ($_SESSION['role'] == 'ADMIN') {
 
-                            header('Location: admin.php');
+                                header('Location: admin.php');
+
+                            } elseif ($_SESSION['role'] == 'GUEST') {
+
+                                header('Location: wishlist.php');
+
+                            }
 
                         } else {
 
