@@ -12,7 +12,7 @@
 
     }
 
-    // Si l'url contient un id, alors on affiche les informations de la produits. Sinon, on n'affiche rien.
+    // Si l'url contient un id, alors on affiche les informations des produits. Sinon, on n'affiche rien.
 
     if (isset($_GET['id'])) {
         
@@ -51,6 +51,14 @@
                         <p>' . $produits['DESCRIPTION'] . '</p>
 
                         <p>' . $produits['PRICE'] . ' € par pièce</p>
+                        
+                        <form action="functions/produits/ajouterProduitToWishlist.php" method="post">
+
+                            <input type="hidden" name="Ajouter" value="' . $produits['ID'] . '">
+
+                            <input type="submit" value="Ajouter à la wishlist">
+
+                        </form>
 
                     </div>
 
@@ -59,6 +67,36 @@
             </section>
 
         ';
+
+        // On prépare une nouvelle requête pour vérifier si le produit est contenu dans la wishlist.
+
+        $requete = $bdd->prepare('SELECT WISHLIST FROM utilisateurs WHERE ID = :id');
+
+        // On exécute la requête.
+
+        $requete->execute(array(
+
+            'id' => $_SESSION['id']
+
+        ));
+
+        // On récupère les informations de l'utilisateur.
+
+        $user = $requete->fetch();
+
+        // On vérifie si le id du produit est contenu dans la liste de wishlist
+
+        $wishlist = explode(',', $user['WISHLIST']);
+
+        if (in_array($_GET['id'], $wishlist)) {
+
+            echo 'Il est dans la wishlist';
+
+        } else {
+
+            echo 'Il n\'est pas dans la wishlist';
+
+        }
 
     } else {
 
