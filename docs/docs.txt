@@ -1,3 +1,28 @@
-Je suis les docs 
+Proposition d'une procédure détaillée à mettre en oeuvre accompagnée d'un plan de tests. 
 
-// TODO : A compléter
+Objectifs ordonnés : 
+
+1 - Mise en place de la connexion utilisateur
+
+    1.1 - La table pour la connexion est déjà prête en raison de la mise en place de l'espace administrateur. Il ne reste plus qu'à la proposer à tous les utilisateurs, et ajouter des rôles.
+    1.2 - Connexion à l'espace PhpMyAdmin. Ajout des rôles à la table utilisateur (deux rôles, ADMIN et GUEST)
+    1.3 - Modifier l'affichage de l'administration pour ne l'afficher qu'aux utilisateurs disposant des droits administrateurs, et affichage d'un nouvel espace pour les rôles GUEST (espace WISHLIST)
+    1.4 - Mise en place de l'espace INSCRIPTION pour ajouter un nouveau compte utilisateur
+
+    //  Effectué - Mise en place de l'inscription pour les utilisateurs.
+
+2 - Mise en place de l'espace WISHLIST
+    
+    2.1 - Modification de la liste des produits pour une relation WISHLIST en MANY-TO-MANY pour lier les produits et les utilisateurs qui souhaitent ajouter ce produit à la WISHLIST
+    2.2 - Mise en place d'un système de récupération des données des produits mentionnés dans la wishlist pour l'espace WISHLIST. (format JSON si possible)
+    2.3 - Affichage des produits de la même manière que les autres produits, mais rajout d'un bouton " <3 " cliquable dans les pages WISHLIST et produits
+    2.4 - Au clic du bouton " <3 " désormais disponible, envoyer une requête pour ajouter ou supprimer de la wishlist, et remplir ou vider le bouton " <3 " en fonction.
+
+3 - Phase de test
+
+    3.1 - Création d'un compte utilisateur avec username utilisateur@example.com et password 118712FaDo#9C
+    3.2 - Consultation des produits une fois connecté, et clic sur le bouton " <3 "
+    3.3 - Consultation de la wishlist et vérification que le produit y est bien représenté. Clic sur le bouton " <3 " pour le supprimer de la WISHLIST
+    3.4 - Rafraichissement de la page, vérification que le produit est supprimé de la WISHLIST
+    3.5 - Consultation de la page produits et surtout du produit précedemment ajouté à WISHLIST pour vérifier que le bouton " <3 " est bien vide et non rempli
+    3.6 - Ajout d'un nouveau produit à la WISHLIST, vérification de présence dans l'onglet WISHLIST, puis retour sur la page produit et supression de l'espace WISHLIST afin de supprimer le produit, puis retour à l'espace WISHLIST pour vérification de l'effet de cette supression.
